@@ -98,7 +98,7 @@ console.log("----------------");
 
 /* Here the console will log the Total Months using length*/
 
-
+console.log("Total Months: " + finances.length);
 
 /* Here the console will log the total of the finances array*/
 
