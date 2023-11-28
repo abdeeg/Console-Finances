@@ -90,11 +90,11 @@ var finances = [
 
 /* Here the console will log the first line of 'Financial Analysis' */
 
-
+console.log("Financial Analysis");
 
 /* Here the console will log the line break */
 
-
+console.log("----------------");
 
 /* Here the console will log the Total Months using length*/
 
