@@ -102,7 +102,11 @@ console.log("Total Months: " + finances.length);
 
 /* Here the console will log the total of the finances array*/
 
+var sum = finances.reduce(function (accumulator, currentValue) {
+  return accumulator + currentValue[1];
+}, 0);
 
+console.log("Total: $" + sum);
 
 /* Here the console will log the Average Change in the finances array*/
 
