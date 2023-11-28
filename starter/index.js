@@ -110,6 +110,13 @@ console.log("Total: $" + sum);
 
 /* Here the console will log the Average Change in the finances array*/
 
+var sum = finances.reduce(function (accumulator, currentValue) {
+  return accumulator + currentValue[1];
+}, 0);
+
+var average = Math.floor(sum / finances.length);
+
+console.log("Average Change: " + average);
 
 
 /* Here the console will log the Greatest Increase in Profits/Losses */
