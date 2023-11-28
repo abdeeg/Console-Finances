@@ -1,3 +1,4 @@
+/* Below is the finances array where I will pick the data from */
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
@@ -86,3 +87,29 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+/* Here the console will log the first line of 'Financial Analysis' */
+
+
+
+/* Here the console will log the line break */
+
+
+
+/* Here the console will log the Total Months using length*/
+
+
+
+/* Here the console will log the total of the finances array*/
+
+
+
+/* Here the console will log the Average Change in the finances array*/
+
+
+
+/* Here the console will log the Greatest Increase in Profits/Losses */
+
+
+
+/* Here the console will log the Greatest Decrease in Profits/Losses */
