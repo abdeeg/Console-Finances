@@ -102,25 +102,69 @@ console.log("Total Months: " + finances.length);
 
 /* Here the console will log the total of the finances array*/
 
+// The 'reduce' function is used to calculate the sum of the second element (Value) in each sub-array
 var sum = finances.reduce(function (accumulator, currentValue) {
+  // Add the current value of the second element to the accumulator
   return accumulator + currentValue[1];
-}, 0);
+}, 0); // The initial value of the accumulator is set to 0
 
+// Output the total sum to the console
 console.log("Total: $" + sum);
+
 
 /* Here the console will log the Average Change in the finances array*/
 
+// Calculate the sum of the second element (Value) in each sub-array using the 'reduce' function
 var sum = finances.reduce(function (accumulator, currentValue) {
+  // Add the current value of the second element to the accumulator
   return accumulator + currentValue[1];
-}, 0);
+}, 0); // The initial value of the accumulator is set to 0
 
+// Calculate the average by dividing the sum by the number of elements in the 'finances' array
 var average = Math.floor(sum / finances.length);
 
-console.log("Average Change: " + average);
+// Output the average change to the console in a user-friendly message
+console.log("Average Change: $" + average);
 
 
 /* Here the console will log the Greatest Increase in Profits/Losses */
+// Initialize variables to track the biggest increase and the corresponding month
+var biggestIncrease = 0;
+var increaseMonth = '';
 
+// Iterate through the 'finances' array starting from the second element
+for (var i = 1; i < finances.length; i++) {
+  // Calculate the increase by subtracting the previous month's value from the current month's value
+  var currentIncrease = finances[i][1] - finances[i - 1][1];
 
+  // Check if the current increase is greater than the current biggest increase
+  if (currentIncrease > biggestIncrease) {
+    // If true, update the biggest increase and the corresponding month
+    biggestIncrease = currentIncrease;
+    increaseMonth = finances[i][0];
+  }
+}
+
+// Output the result to the console in a user-friendly message
+console.log("Greatest Increase in Profits/Losses: " + increaseMonth + " ($" + biggestIncrease + ")");
 
 /* Here the console will log the Greatest Decrease in Profits/Losses */
+// Initialize variables to track the biggest decrease and the corresponding month
+var biggestDecrease = 0;
+var decreaseMonth = '';
+
+// Iterate through the 'finances' array starting from the second element
+for (var i = 1; i < finances.length; i++) {
+  // Calculate the decrease by subtracting the previous month's value from the current month's value
+  var currentDecrease = finances[i][1] - finances[i - 1][1];
+
+ // Check if the current decrease is smaller than the current biggest decrease
+  if (currentDecrease < biggestDecrease) {
+
+    // If true, update the biggest decrease and the corresponding month
+    biggestDecrease = currentDecrease;
+    decreaseMonth = finances[i][0];
+  }
+}
+// Output the result to the console in a user-friendly message
+console.log("Greatest Decrease in Profits/Losses: " + decreaseMonth + " ($" + biggestDecrease + ")");
